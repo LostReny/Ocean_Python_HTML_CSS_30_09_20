@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jogo do Ocean com Python</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Comentário em HTML-->
-    Minha primeira página<br>
-    <br>
-    Primeira frase<br>
-    <br>
-    <b>Um texto em negrito</b><br>
-    <i>itálico</i><br>
-    <u>sublinhado</u><br>
+    <div class="jogo">
+        <form method="post"> <!--permite enviar dados-->
 
-    <!--Div é um bloco utilizado como grupo de informações-->
-    <div id="bloco_principal" class="blocos_informacao">
-        Esse é o meu bloco de div
+            <div class="jogo__input">
+                <label for="nome_jogador">Digite o seu nome</label>
+                <input type="text" name="nome_jogador" id="nome_jogador" placeholder="Digite o seu nome" required>
+            </div>
+
+            <div class="jogo__input">
+                <input type="radio" name="escolha" id="escolha1" value="futurista" checked>
+                <label for="escolha1">Futurista</label>
+
+                
+                <input type="radio" name="escolha" id="escolha2" value="medieval" checked>
+                <label for="escolha2">Medieval</label>
+
+            </div>
+
+            <div class="jogo__input">
+                <input type="submit" class="jogo__botao" value="Jogar">
+            </div>
+
+        </form>
     </div>
-
-    <div class="blocos_informacao">Esse é meu segundo div</div>
-
-    <div class="blocos_imagens">Meu terceiro div</div>
-
-    <span>Texto dentro de um span</span>
 </body>
 </html>

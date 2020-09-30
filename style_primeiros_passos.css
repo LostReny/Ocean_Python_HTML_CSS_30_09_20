@@ -1,0 +1,18 @@
+/*Comentário em CSS*/
+
+div {
+    font-weight: bold;
+    color: red;
+}
+
+#bloco_principal {
+    font-size: 24px;
+}
+
+.blocos_informacao {
+    text-decoration: underline;
+}
+
+.blocos_imagens {
+    color: blue;
+}
