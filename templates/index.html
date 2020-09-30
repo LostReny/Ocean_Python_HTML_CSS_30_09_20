@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo do Ocean com Python</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <div class="jogo">
+
+        {% if not premio %}
+
         <form method="post"> <!--permite enviar dados-->
 
             <div class="jogo__input">
@@ -30,6 +33,22 @@
             </div>
 
         </form>
+
+        {% else %}
+
+        <div class="jogo__premio">
+            {{ nome_jogador }}, você recebeu <b>{{ premio }}</b>
+        </div>
+
+        <div class="jogo_premio-imagem">
+            <img src="{{ premio_imagem }}" alt="Imagem do Prêmio" width="100%">
+        </div>
+
+        <div class="jogo__input jogo__input--jogarnovamente">  
+            <a href="/" class="jogo_botao">Jogar novamente!</a>
+        </div>
+
+        {% endif %}
     </div>
 </body>
 </html>
